@@ -1,2 +1,8 @@
 Library
 Temp
+*.csproj
+*.sln
+*.userprefs
+Assembly-CSharp.csproj.FilesWrittenAbsolute.txt
+Assembly-CSharp.dll
+Assembly-CSharp.dll.mdb
