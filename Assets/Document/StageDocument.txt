@@ -1,0 +1,16 @@
+[ Stage document ]
+
+< 스테이지 구성 정보 >
+
+Stage
+- Field_01
+	Zone_01
+		Block_01
+		Cover_01
+		Cover_02
+		...
+	Zone_02
+	Zone_03
+	...
+- Field_02
+- ...
