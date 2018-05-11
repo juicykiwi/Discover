@@ -1,10 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Discover.Stage.Block;
-using Discover.Stage.Cover;
 
-namespace Discover.Stage.Zone
+namespace Discover.Stage
 {
     public class ZoneBase : MonoBehaviour
     {

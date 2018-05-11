@@ -1,4 +1,4 @@
-﻿namespace Discover.Stage.Field
+﻿namespace Discover.Stage
 {
     public enum FieldType
     {

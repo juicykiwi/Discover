@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using Discover.Stage.Zone;
 
-namespace Discover.Stage.Field
+namespace Discover.Stage
 {
     public class FieldBase : MonoBehaviour
     {

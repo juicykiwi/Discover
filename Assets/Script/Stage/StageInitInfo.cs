@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace Discover.Stage
 {
-    public class BlockBase : MonoBehaviour
+    public class StageInitInfo
     {
+        public int StageIndex { get; set; }
     }
 }

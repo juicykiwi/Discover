@@ -1,4 +1,4 @@
-﻿namespace Discover.Stage.Zone
+﻿namespace Discover.Stage
 {
     public enum ZoneType
     {

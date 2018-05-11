@@ -1,4 +1,4 @@
-﻿namespace Discover.Stage.Cover
+﻿namespace Discover.Stage
 {
     public enum CoverType
     {

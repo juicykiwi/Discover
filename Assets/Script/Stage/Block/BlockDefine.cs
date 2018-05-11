@@ -1,5 +1,4 @@
-﻿
-namespace Discover.Stage.Block
+﻿namespace Discover.Stage
 {
     public enum BlockType
     {
