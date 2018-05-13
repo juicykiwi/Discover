@@ -10,7 +10,7 @@ namespace Discover.Stage
         public StageData Load( int stageIndex )
         {
             FileInfo fileInfo = new FileInfo();
-            fileInfo.path = "Stage";
+            fileInfo.path = "Data/Stage";
             fileInfo.name = StageData.GetDataName(stageIndex, false);
             fileInfo.extension = StageData.GetDataExtension();
 
@@ -30,7 +30,7 @@ namespace Discover.Stage
 
         private string StageDataPath()
         {
-            return Application.dataPath + "/Resources/Stage";
+            return Application.dataPath + "/Resources/Data/Stage";
         }
     }
 }
