@@ -12,6 +12,11 @@ namespace Discover.Stage
         protected List<FieldBase> _fieldList = new List<FieldBase>();
         protected StageDataControl _dataControl = new StageDataControl();
 
+        void Awake()
+        {
+            Load(0);
+        }
+
         public void Init( StageInitInfo stageInitInfo )
         {
             

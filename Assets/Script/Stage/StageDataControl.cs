@@ -11,7 +11,7 @@ namespace Discover.Stage
         {
             FileInfo fileInfo = new FileInfo();
             fileInfo.path = "Data/Stage";
-            fileInfo.name = StageData.GetDataName(stageIndex, false);
+            fileInfo.fileName = StageData.GetDataName(stageIndex, false);
             fileInfo.extension = StageData.GetDataExtension();
 
             StageData loadData = DataControl.LoadJson<StageData>(fileInfo);
@@ -22,7 +22,7 @@ namespace Discover.Stage
         {
             FileInfo fileInfo = new FileInfo();
             fileInfo.path = StageDataPath();
-            fileInfo.name = data.GetDataName(false);
+            fileInfo.fileName = data.GetDataName(false);
             fileInfo.extension = StageData.GetDataExtension();
 
             DataControl.SaveJson<StageData>(data, fileInfo);
