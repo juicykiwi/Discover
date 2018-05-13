@@ -39,5 +39,28 @@ namespace Windlight.Data
 
             File.WriteAllText(fileInfo.GetAllPathIncludeExtension(), serializeText);
         }
+
+        public static T LoadDataInResources<T>( FileInfo fileInfo ) where T : Object
+        { 
+            T loadData = Resources.Load<T>(fileInfo.GetAllPath());
+            if (loadData == null)
+            {
+                return null;
+            }
+
+            T newData = GameObject.Instantiate<T>(loadData);
+            if (newData == null)
+            {
+                return null;
+            }
+
+            return newData;
+        }
+
+//        public static T LoadDataInResourcesAsync<T>( FileInfo fileInfo ) where T : Object
+//        {
+//            ResourceRequest request = Resources.LoadAsync<T>(fileInfo.GetAllPath());
+//            return null;
+//        }
     }
 }
