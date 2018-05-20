@@ -1,4 +1,26 @@
 {
     "_index": 0,
-    "_Description": "stage_00000"
+    "_description": "",
+    "_fieldInfoList": [
+        {
+            "_zoneInfoList": [
+                {
+                    "_blockInfoList": [
+                        {}
+                    ],
+                    "_coverInfoList": [
+                        {}
+                    ]
+                },
+                {
+                    "_blockInfoList": [
+                        {}
+                    ],
+                    "_coverInfoList": [
+                        {}
+                    ]
+                }
+            ]
+        }
+    ]
 }

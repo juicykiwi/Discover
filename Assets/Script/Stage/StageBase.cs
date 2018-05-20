@@ -6,31 +6,39 @@ namespace Discover.Stage
 {
     public class StageBase : MonoBehaviour
     {
+        bool _isLoadedStage = false;
+        public bool isLoadedStage { get { return _isLoadedStage; } }
+
         [SerializeField]
         protected StageData _stageData = new StageData();
 
         protected List<FieldBase> _fieldList = new List<FieldBase>();
         protected StageDataControl _dataControl = new StageDataControl();
 
-        void Awake()
-        {
-            Load(0);
-        }
 
-        public void Init( StageInitInfo stageInitInfo )
-        {
-            
-        }
-
-        public void Save()
+        public void SaveStageData()
         {
             _dataControl.Save(_stageData);
         }
 
-        public void Load( int stageIndex )
+        public void LoadStageData( int stageIndex )
         {
             StageData loadStageData = _dataControl.Load(stageIndex);
             _stageData = loadStageData;
+        }
+
+        public void LoadStage( StageInitInfo stageInitInfo )
+        {
+            StartCoroutine(LoadStageCoroutine(stageInitInfo));
+        }
+
+        IEnumerator LoadStageCoroutine( StageInitInfo stageInitInfo )
+        {
+            _isLoadedStage = false;
+            LoadStageData(stageInitInfo.StageIndex);
+            yield return null;
+
+            _isLoadedStage = true;
         }
     }
 }

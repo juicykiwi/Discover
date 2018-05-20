@@ -34,13 +34,13 @@ namespace Discover.Stage
                 {
                     if (GUILayout.Button("Save") == true)
                     {
-                        _target.Save();
+                        _target.SaveStageData();
                         AssetDatabase.Refresh();
                     }
 
                     if (GUILayout.Button("Load") == true)
                     {
-                        _target.Load(_loadStageIndex);
+                        _target.LoadStageData(_loadStageIndex);
                     }
                 }
                 GUILayout.EndVertical();

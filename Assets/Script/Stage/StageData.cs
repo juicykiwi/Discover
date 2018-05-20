@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Discover.Stage
 {
@@ -6,8 +8,10 @@ namespace Discover.Stage
     public class StageData
     {
         public int _index = 0;
+        public string _description = "";
 
-        public string _Description = "";
+        public List<FieldInfo> _fieldInfoList = new List<FieldInfo>();
+
 
         public string GetDataName( bool includeExtension )
         {
