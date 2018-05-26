@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Windlight.Data;
+using Windlight.TiledMap;
 
 namespace Discover.Stage
 {
@@ -14,6 +16,9 @@ namespace Discover.Stage
 
         protected List<FieldBase> _fieldList = new List<FieldBase>();
         protected StageDataControl _dataControl = new StageDataControl();
+
+        [SerializeField]
+        protected TiledMapData _tiledMapdata = null;
 
 
         public void SaveStageData()
@@ -39,6 +44,8 @@ namespace Discover.Stage
             yield return null;
 
             _isLoadedStage = true;
+
+            _tiledMapdata = TiledMapImport.ImportTileMapData(_stageData._tiledMapName);
         }
     }
 }

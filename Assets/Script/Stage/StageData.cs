@@ -10,6 +10,8 @@ namespace Discover.Stage
         public int _index = 0;
         public string _description = "";
 
+        public string _tiledMapName = "";
+
         public List<FieldInfo> _fieldInfoList = new List<FieldInfo>();
 
 

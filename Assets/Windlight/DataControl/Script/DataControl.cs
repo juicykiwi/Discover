@@ -6,6 +6,8 @@ namespace Windlight.Data
 {
     public class DataControl
     {
+        // Json
+
         public static T LoadJson<T>( FileInfo fileInfo ) where T : class, new()
         {
             TextAsset loadTextAsset = Resources.Load<TextAsset>(fileInfo.GetAllPath());
@@ -40,6 +42,9 @@ namespace Windlight.Data
             File.WriteAllText(fileInfo.GetAllPathIncludeExtension(), serializeText);
         }
 
+
+        // Unity Object
+
         public static T LoadDataInResources<T>( FileInfo fileInfo ) where T : Object
         { 
             T loadData = Resources.Load<T>(fileInfo.GetAllPath());
@@ -56,11 +61,5 @@ namespace Windlight.Data
 
             return newData;
         }
-
-//        public static T LoadDataInResourcesAsync<T>( FileInfo fileInfo ) where T : Object
-//        {
-//            ResourceRequest request = Resources.LoadAsync<T>(fileInfo.GetAllPath());
-//            return null;
-//        }
     }
 }
