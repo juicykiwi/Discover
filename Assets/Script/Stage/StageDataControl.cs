@@ -10,9 +10,9 @@ namespace Discover.Stage
         public StageData Load( int stageIndex )
         {
             FileInfo fileInfo = new FileInfo();
-            fileInfo.path = "Data/Stage";
-            fileInfo.fileName = StageData.GetDataName(stageIndex, false);
-            fileInfo.extension = StageData.GetDataExtension();
+            fileInfo.path = StageSerializeInfo.DataPath;
+            fileInfo.fileName = StageSerializeInfo.GetDataName(stageIndex, false);
+            fileInfo.extension = StageSerializeInfo.DataExtension;
 
             StageData loadData = DataControl.LoadJson<StageData>(fileInfo);
             return loadData;
@@ -21,16 +21,11 @@ namespace Discover.Stage
         public void Save( StageData data )
         {
             FileInfo fileInfo = new FileInfo();
-            fileInfo.path = StageDataPath();
-            fileInfo.fileName = data.GetDataName(false);
-            fileInfo.extension = StageData.GetDataExtension();
+            fileInfo.path = StageSerializeInfo.DataSavePath();
+            fileInfo.fileName = StageSerializeInfo.GetDataName(data._index, false);
+            fileInfo.extension = StageSerializeInfo.DataExtension;
 
             DataControl.SaveJson<StageData>(data, fileInfo);
-        }
-
-        private string StageDataPath()
-        {
-            return Application.dataPath + "/Resources/Data/Stage";
         }
     }
 }

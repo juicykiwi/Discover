@@ -1,9 +1,14 @@
 {
     "_index": 0,
     "_description": "",
-    "_tiledMapName": "StageTiled_00000",
     "_fieldInfoList": [
         {
+            "_fieldType": 0,
+            "_tiledMapDataName": "StageTiled_00000",
+            "_tiledMapData": {
+                "width": 0,
+                "height": 0
+            },
             "_zoneInfoList": [
                 {
                     "_blockInfoList": [

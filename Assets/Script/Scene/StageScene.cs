@@ -31,8 +31,8 @@ namespace Discover.Stage
         void InitStageBase()
         {
             FileInfo fileInfo = new FileInfo();
-            fileInfo.path = "Prefab/Stage";
-            fileInfo.fileName = "StageBase";
+            fileInfo.path = StagePrefabInfo.Path;
+            fileInfo.fileName = StagePrefabInfo.BaseDataName;
 
             _stage = DataControl.LoadDataInResources<StageBase>(fileInfo);
             _stage.transform.SetParent(transform);

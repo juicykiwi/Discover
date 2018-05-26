@@ -4,4 +4,10 @@
     {
         EarthContinent,
     }
+
+    public class FieldPrefabInfo
+    {
+        public const string Path = "Prefab/Stage/Field";
+        public const string FieldBaseName = "FieldBase";
+    }
 }

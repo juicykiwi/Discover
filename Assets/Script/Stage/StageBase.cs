@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Windlight.Data;
-using Windlight.TiledMap;
+using Windlight.UnityObject;
 
 namespace Discover.Stage
 {
@@ -17,9 +17,8 @@ namespace Discover.Stage
         protected List<FieldBase> _fieldList = new List<FieldBase>();
         protected StageDataControl _dataControl = new StageDataControl();
 
-        [SerializeField]
-        protected TiledMapData _tiledMapdata = null;
 
+        // Save and load stage
 
         public void SaveStageData()
         {
@@ -30,6 +29,8 @@ namespace Discover.Stage
         {
             StageData loadStageData = _dataControl.Load(stageIndex);
             _stageData = loadStageData;
+
+            _stageData.InitData();
         }
 
         public void LoadStage( StageInitInfo stageInitInfo )
@@ -37,15 +38,39 @@ namespace Discover.Stage
             StartCoroutine(LoadStageCoroutine(stageInitInfo));
         }
 
-        IEnumerator LoadStageCoroutine( StageInitInfo stageInitInfo )
+        protected IEnumerator LoadStageCoroutine( StageInitInfo stageInitInfo )
         {
             _isLoadedStage = false;
             LoadStageData(stageInitInfo.StageIndex);
             yield return null;
 
-            _isLoadedStage = true;
+            yield return StartCoroutine(CreateStageCoroutine());
 
-            _tiledMapdata = TiledMapImport.ImportTileMapData(_stageData._tiledMapName);
+            _isLoadedStage = true;
+        }
+
+
+        // Create stage
+
+        protected IEnumerator CreateStageCoroutine()
+        {
+            foreach (FieldInfo eachFieldInfo in _stageData._fieldInfoList)
+            {
+                yield return StartCoroutine(CreateFieldCoroutine(eachFieldInfo));
+            }
+
+            yield break;
+        }
+
+        protected IEnumerator CreateFieldCoroutine( FieldInfo fieldInfo ) 
+        {
+            FieldBase field = FieldFactory.CreateField(fieldInfo);
+            UnityObjectHelper.SetParent(gameObject, field.gameObject, true);
+
+            field.InitField(fieldInfo);
+
+            _fieldList.Add(field);
+            yield break;
         }
     }
 }
