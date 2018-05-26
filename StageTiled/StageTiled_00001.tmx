@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="32" tileheight="32" infinite="0" nextobjectid="1">
+ <tileset firstgid="1" name="Tile_00001" tilewidth="32" tileheight="32" tilecount="16" columns="4">
+  <image source="../DiscoverResource/Tiled/Tile_00001.png" width="128" height="128"/>
+ </tileset>
+ <layer name="TileLayer01" width="10" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,3,0,0,0,0,0,0,0,3,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,3,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,3,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,3,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <layer name="TileLayer02" width="10" height="10">
+  <data encoding="csv">
+4,4,4,4,4,4,4,4,4,4,
+4,4,4,4,4,4,4,4,4,4,
+4,4,4,4,4,4,4,4,4,4,
+4,4,4,4,4,4,4,4,4,4,
+4,4,4,4,4,4,4,4,4,4,
+4,4,4,4,4,4,4,4,4,4,
+4,4,4,4,4,4,4,4,4,4,
+4,4,4,4,4,4,4,4,4,4,
+4,4,4,4,4,4,4,4,4,4,
+4,4,4,4,4,4,4,4,4,4
+</data>
+ </layer>
+ <layer name="TileLayer03" width="10" height="10">
+  <data encoding="csv">
+2,2,2,2,2,2,2,0,0,0,
+2,2,2,2,2,2,0,0,0,0,
+2,2,2,2,2,0,0,0,0,0,
+2,2,2,2,2,0,0,0,0,0,
+2,2,2,2,0,0,0,0,0,0,
+2,2,2,0,0,0,0,0,0,0,
+2,2,0,0,0,0,0,0,0,0,
+2,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>
