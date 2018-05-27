@@ -9,12 +9,18 @@ Windlight
 
 Stage 구성 추가 밍 보여주기
 
+-----------------------
+< 18.??.?? >
+
+TiledMap의 layers.data 정보를 zone 에 저장 처리
+block, discover 생성 처리
 
 -----------------------
 < 18.05.27 >
 
 TileMapData 로드 처리 개선
-Field GameObject 생성 처리 작업 중
+Field GameObject 생성 처리
+Zone GameObject 생성 처리
 
 -----------------------
 < 18.05.20 >
